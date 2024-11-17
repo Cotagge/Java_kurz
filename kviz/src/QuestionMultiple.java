@@ -3,7 +3,7 @@ import java.util.HashMap;
 public class QuestionMultiple {
     private String question;
     private HashMap<String, String> options;
-    private String[] correctAnswers;  // např. {"a", "b"}
+    private String[] correctAnswers; 
 
     public QuestionMultiple(String question, HashMap<String, String> options, String[] correctAnswers) {
         this.question = question;
@@ -20,12 +20,10 @@ public class QuestionMultiple {
     }
 
     public boolean checkAnswers(String userAnswer) {
-        // Rozdělíme odpověď uživatele podle čárky a převedeme na malá písmena
         String[] userAnswers = userAnswer.toLowerCase().split(",");
 
-        // Kontrola každé uživatelovy odpovědi
         for (String answer : userAnswers) {
-            answer = answer.trim(); // odstraní mezery
+            answer = answer.trim();
             boolean isCorrect = false;
             for (String correct : correctAnswers) {
                 if (answer.equals(correct.toLowerCase())) {
@@ -33,8 +31,8 @@ public class QuestionMultiple {
                     break;
                 }
             }
-            if (!isCorrect) return false; // pokud zadal špatnou odpověď
+            if (!isCorrect) return false;
         }
-        return true; // všechny zadané odpovědi byly správné
+        return true;
     }
 }
