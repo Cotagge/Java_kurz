@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="kviz:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/kviz_jar</output-path>
+    <root id="archive" name="kviz.jar">
+      <element id="module-output" name="kviz" />
+    </root>
+  </artifact>
+</component>
